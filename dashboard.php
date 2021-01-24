@@ -37,6 +37,7 @@
             </li>
           </ul>
         </nav>
-      </header>
+    </header>
+
 </body>
 </html>
