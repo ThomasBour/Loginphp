@@ -32,11 +32,11 @@
     <h1 class="text-2xl font-bold text-gray-800 mb-5">Connexion</h1>
     <!-- <h1 class="text-2xl font-bold text-blue-800 mb-2">Oui testOui</h1> -->
     <div class="mb-4">
-            <label for="mail" class="block text-blue-200 mb-2">Insert your email</label>
+            <label for="mail" class="block text-blue-300 mb-2">Insert your email</label>
             <input name="mail" placeholder="email" type="email" class="border py-2 px-3 text-gray-700 w-full focus:shadow-inner"></input>
     </div>
     <div class="mb-4">
-            <label for="mdp" class="block text-blue-200 mb-2">Insert your password</label>
+            <label for="mdp" class="block text-blue-300 mb-2">Insert your password</label>
             <input name="mdp" placeholder="Password" type="password" class="border py-2 px-3 text-gray-700 w-full focus:shadow-inner"></input>
     </div>
         <div>
