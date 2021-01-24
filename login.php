@@ -1,32 +1,49 @@
 <?php
-    session_start();
-    if(isset($_POST['submit'])){
-        $email=$_POST['mail'];
-        $mdp=sha1($_POST['mdp']);
-        include('db.php');
-        $sql='SELECT * FROM users WHERE mail = ?';
-        $request = $db -> prepare($sql);
-        $request -> execute([$email]);
-        $result = $request -> fetch();
-        if($mdp===$result['password']){
+    session_start();  //lancer le serveur
+    if(isset($_POST['submit'])){ //si on clique sur le bouton(voir plus bas)
+        $email=$_POST['mail']; 
+        $mdp=sha1($_POST['mdp']); //crypter les caracteres 
+        include('db.php');  //pour copier le code d une page
+        $sql='SELECT * FROM users WHERE mail = ?';  //code que ca doit prendre dans la base (* = tout select)
+        $request = $db -> prepare($sql);  
+        $request -> execute([$email]); 
+        $result = $request -> fetch(); //récup les données plus haut 
+        if($mdp===$result['password']){  
             $_SESSION['email_user']=$result['mail'];
             $_SESSION['id_user']=$result['id'];
-            header('location:./test.php');
+            $_SESSION['name_user']=$result['Admin'];
+            header('location:./dashboard.php');
         }
     }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Demo</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-purple-200 flex content-center justify-center h-full items-center">
+<div class="bg-white shadow-lg max-w-lg md:flex">
+    <img src="https://i.imgur.com/obMQiHs.jpg" class="flex-1 w-full h-60 object-cover md:h-full"> <!-- Exemple : h-40 = 10rem car tout est divisé en 1/4 de rem -->
+<div class="p-4 flex-1 md:flex md:flex-col justify-center items-center">
     <form method="POST">
-    <input name="mail" placeholder="email" type="email"></input>
-    <input name="mdp" placeholder="MotDePasse" type="password"></input>
-    <button type="submit" name="submit">login</button>
+    <h1 class="text-2xl font-bold text-gray-800 mb-5">Connexion</h1>
+    <!-- <h1 class="text-2xl font-bold text-blue-800 mb-2">Oui testOui</h1> -->
+    <div class="mb-4">
+            <label for="mail" class="block text-blue-200 mb-2">Insert your email</label>
+            <input name="mail" placeholder="email" type="email" class="border py-2 px-3 text-gray-700 w-full focus:shadow-inner"></input>
+    </div>
+    <div class="mb-4">
+            <label for="mdp" class="block text-blue-200 mb-2">Insert your password</label>
+            <input name="mdp" placeholder="Password" type="password" class="border py-2 px-3 text-gray-700 w-full focus:shadow-inner"></input>
+    </div>
+        <div>
+            <button type="submit" name="submit" class="bg-blue-500 text-white px-6 py-1 rounded transform scale-100 hover:scale-105 hover:bg-blue-600 ">login</button>
+        </div>
+    </div>
     </form>
+</div>
 </body>
 </html>
