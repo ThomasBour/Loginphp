@@ -12,3 +12,9 @@
 
 J'apprécie beaucoup plus le backend qu'avant même si ce n'est toujours pas ce que je préfere et ca me semble beaucoup plus simple et accessible qu'avant.
 
+## Le site
+
+Voici le lien du [site](https://thomas.go.yj.fr/)
+
+Mail utilisable : admin@example.com
+Mdp : GraceHopper<3
