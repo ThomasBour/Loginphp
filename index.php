@@ -27,20 +27,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demo</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap" rel="stylesheet">
 </head>
 <body class="bg-purple-200 flex content-center justify-center h-full items-center">
 <div class="bg-white shadow-lg max-w-lg md:flex">
     <img src="https://i.imgur.com/obMQiHs.jpg" class="flex-1 w-full h-60 object-cover md:h-full"> <!-- Exemple : h-40 = 10rem car tout est divisé en 1/4 de rem -->
 <div class="p-4 flex-1 md:flex md:flex-col justify-center items-center">
     <form method="POST">
-    <h1 class="text-2xl font-bold text-gray-800 mb-5">Connexion</h1>
+    <h1 class="text-2xl font-bold text-gray-800 mb-5 yep">Connexion</h1>
     <!-- <h1 class="text-2xl font-bold text-blue-800 mb-2">Oui testOui</h1> -->
     <div class="mb-4">
-            <label for="mail" class="block text-blue-300 mb-2">Insert your email</label>
+            <label for="mail" class="block text-blue-300 mb-2 yup">Insert your email</label>
             <input name="mail" placeholder="email" type="email" class="border py-2 px-3 text-gray-700 w-full focus:shadow-inner"></input>
     </div>
     <div class="mb-4">
-            <label for="mdp" class="block text-blue-300 mb-2">Insert your password</label>
+            <label for="mdp" class="block text-blue-300 mb-2 yup">Insert your password</label>
             <input name="mdp" placeholder="Password" type="password" class="border py-2 px-3 text-gray-700 w-full focus:shadow-inner"></input>
     </div>
         <div>
