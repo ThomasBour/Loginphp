@@ -1,5 +1,8 @@
 <?php
     session_start();  //lancer le serveur
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
     if(isset($_POST['submit'])){ //si on clique sur le bouton(voir plus bas)
         $email=$_POST['mail']; 
         $mdp=sha1($_POST['mdp']); //crypter les caracteres 
@@ -12,6 +15,7 @@
             $_SESSION['email_user']=$result['mail'];
             $_SESSION['id_user']=$result['id'];
             $_SESSION['name_user']=$result['Admin'];
+            $_SESSION['image']=$result['profilp'];
             header('location:./dashboard.php');
         }
     }

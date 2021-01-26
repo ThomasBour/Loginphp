@@ -6,29 +6,71 @@
     <title>Acceuil</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <header class="bg-gray-700 md:flex md:items-center md:justify-between p-4 shadow-lg md:pb-4 ">
-        <div class="flex items-center justify-between mb-4 md:mb-0">
-          <h1 class="leading-none text-2xl text-grey-darkest">
-            <a class="text-white text-3xl font-bold p-3 text-red-200 hover:text-green-200" href="#">
-              Acceuil
-            </a>
-          </h1>
-        </div>
-        <nav>
-          <ul class="list-reset md:flex md:items-center">
-            <li class="md:ml-4">
-              <a class="border-t block text-xl hover:underline py-2 text-red-200 hover:text-green-200 md:border-none md:p-0" href="./paint.php">
-                Paint
+<div class="container my-12 mx-auto px-4 md:px-12">
+  <div class="flex flex-wrap -mx-1 lg:-mx-4 flex content-center justify-center">
+
+      <!-- Column -->
+      <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3 ">
+
+          <!-- Article -->
+          <article class="overflow-hidden rounded-lg shadow-lg">
+
+              <a href="#">
+                  <img alt="Placeholder" class="block h-auto w-full" src="https://www.hainaut-developpement.be/wp-content/uploads/2019/06/portrait-becode-photo-1.jpg">
               </a>
-            </li>
-            <li class="md:ml-4">
-              <a class="border-t block p-3 text-xl hover:underline py-2 text-red-200 hover:text-green-200 md:border-none md:p-0" href="./logout.php">
-                Logout
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-</body>
+
+              <header class="flex items-center justify-between leading-tight p-2 md:p-4 bg-gray-300">
+                  <h1 class="text-lg">
+                      <p class="no-underline hover:underline text-black" href="#">
+                          <?php $_SESSION['id_user']=$result['id'];?>
+                      </p>
+                  </h1>
+                  <p class="text-grey-darker text-sm">
+                        <?php echo date('Y-m-d H:i:s');?>
+                  </p>
+              </header>
+
+              <footer class="flex items-center justify-between leading-none p-2 md:p-4 bg-gray-300">
+                  <a class="flex items-center no-underline hover:underline text-black" href="#">
+                      <img alt="Placeholder" class="w-20 h-20 rounded-full border-4 border-white mr-6 -mt-8" src="https://avatars.githubusercontent.com/u/26065817?s=400&u=90415066e6f605a9273bd0689e24c68262b630c6&v=4">
+                      <p class="ml-2 text-sm">
+                        <?php echo $_SESSION['name_user'];?>
+                      </p>
+                  </a>
+                  <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
+                      <span class="hidden">Like</span>
+                      <i class="fa fa-heart"></i>
+                  </a>
+              </footer>
+
+          </article>
+          <!-- END Article -->
+
+      </div>
+      <!-- END Column -->
+
 </html>
+
+<!-- <?php
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+    $db=new PDO('mysql:host=localhost;dbname=cwmnrccz_login;charset=utf8','cwmnrccz_thomas','MotDePasse1*');
+?> -->
+
+
+
+<!-- <div class="flex h-screen items-center justify-center">
+    <div class="container rounded shadow max-w-md bg-gray-200">
+        <img scr="https://i.imgur.com/fxk4k7c.png" class="w-full rounded h-50 rounded-b-none">
+        <div class="p-4 flex">
+            <img src="https://i.imgur.com/fxk4k7c.png" class="w-32 h-32 rounded-full border-4 border-white mr-8 -mt-12" alt="">
+            <h1 class="text-xl font-bold text-gray"><?php echo $_SESSION['name_user']; ?></h1>
+            <p class="text-gray-500">OOuiOuiOuiOuiOuiOuiOuiui</p>
+        </div>   
+    </div>
+    <div class="h-1 bg-gray-400 my-2 mx-4" style="height:10px;"></div>
+    <div class="p-4">
+        <p class="text-gray-500">
+    </div>
+</div> -->
