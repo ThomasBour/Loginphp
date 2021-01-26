@@ -27,10 +27,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demo</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap" rel="stylesheet">
+    <style>
+        .yep{
+    font-family: 'The Girl Next Door', cursive;
+    }
+    .yup{
+    font-family: 'The Girl Next Door', cursive;
+    }
+    </style>
 </head>
 <body class="bg-purple-200 flex content-center justify-center h-full items-center">
 <div class="bg-white shadow-lg max-w-lg md:flex">

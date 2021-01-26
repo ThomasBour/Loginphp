@@ -10,8 +10,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acceuil</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .yep{
+    font-family: 'The Girl Next Door', cursive;
+    }
+    .yup{
+    font-family: 'The Girl Next Door', cursive;
+    }
+    </style>
 </head>
 <body class="bg-blue-600 bg-opacity-30">
     <header class="bg-gray-700 md:flex md:items-center md:justify-between p-4 shadow-lg md:pb-4 ">
