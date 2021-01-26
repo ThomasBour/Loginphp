@@ -4,7 +4,7 @@
 
 1. Rattraper les bases de php et MySQL.
 
-2. De montrer mes avancées avec l'utilisation de tailwindcss
+2. De montrer mes avancées avec l'utilisation de tailwindcss (dans sa version moins poussée).
 
 3. Découvrir l'utilisation de sites pour host mon site que ce soit gratuitement ou en payant (en l'occurence planetHoster).
 
