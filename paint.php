@@ -27,7 +27,7 @@
     <header class="bg-gray-700 md:flex md:items-center md:justify-between p-4 shadow-lg md:pb-4 ">
         <div class="flex items-center justify-between mb-4 md:mb-0">
           <h1 class="leading-none text-2xl text-grey-darkest">
-            <a class="text-white text-3xl font-bold p-3 text-red-200 hover:text-green-200 transition ease-in duration-1000 yup" href="#">
+            <a class="text-white text-3xl font-bold p-3 text-red-200 hover:text-green-200 transition ease-in duration-1000 yup" href="./dashboard.php">
               Acceuil
             </a>
           </h1>
